@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio autoplay loop>
+<source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<div class="center">
+<h1>Veux-tu être ma Saint-Valentine Isaline ? 💖</h1>
+
+<button class="btn yes">OUI 😍</button>
+<button class="btn no" id="no">Non 🙃</button>
+
+<p id="finalMsg"></p>
+</div>
+
+<script src="hearts.js"></script>
+<script>
+const yes = document.querySelector(".yes");
+const no = document.getElementById("no");
+const msg = document.getElementById("finalMsg");
+
+yes.onclick = () => {
+msg.innerHTML = "🎉 T’AS GAGNÉ ALOU ❤️❤️❤️";
+};
+
+no.onclick = () => {
+msg.innerHTML = "😢😭💔🥺🥺🥺";
+};
+
+no.onmouseover = () => {
+no.style.position = "absolute";
+no.style.left = Math.random() * 80 + "%";
+no.style.top = Math.random() * 80 + "%";
+};
+</script>
+
+</body>
+</html>
