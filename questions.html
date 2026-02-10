@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Questions 💕</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio autoplay loop>
+<source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<div class="center">
+<h1>Petites questions 💭</h1>
+<p id="q"></p>
+
+<button class="btn" onclick="next()">😍</button>
+<button class="btn" onclick="next()">🥰</button>
+</div>
+
+<script src="hearts.js"></script>
+<script>
+const questions = [
+"Est-ce que tu souris en lisant ça ? 😊",
+"Tu savais que tu es incroyable ? 💖",
+"Est-ce que tu aimes les surprises ? 🎁",
+"Tu penses à moi parfois ? 😏",
+"Est-ce que tu crois au destin ? ✨",
+"Tu aimes les moments simples à deux ? 💑",
+"Tu te sens spéciale ? (tu l’es)",
+"Tu es prête pour la suite ? 😳"
+];
+
+let i = 0;
+const q = document.getElementById("q");
+q.innerHTML = questions[i];
+
+function next() {
+i++;
+if (i < questions.length) {
+q.innerHTML = questions[i];
+} else {
+window.location.href = "feelings.html";
+}
+}
+</script>
+
+</body>
+</html>
